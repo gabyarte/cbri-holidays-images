@@ -43,12 +43,11 @@ def distance(img1, img2):
     return distance
 
 
-img = cv2.imread('../data/100000.jpg')
-im1 = smart_histogram_descriptor(img)
+# img = cv2.imread('../data/100000.jpg')
+# img2 = cv2.imread('../data/131502.jpg')
 
 
-img2 = cv2.imread('../data/131502.jpg')
-im2 = smart_histogram_descriptor(img2)
-
-
-print(distance(im1, im2))
+def smart_histogram_chisqr(img1, img2):
+    im1 = smart_histogram_descriptor(img1)
+    im2 = smart_histogram_descriptor(img2)
+    return distance(im1, im2)
